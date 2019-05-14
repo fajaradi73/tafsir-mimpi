@@ -94,14 +94,12 @@ var Style = StyleSheet.create({
         fontSize: 25,
         marginTop: 20,
         textAlign: 'center',
-        fontFamily: 'Lato-Regular',
         color: '#48B7E4',
     },
     signUpTitle: {
         fontSize: 25,
         marginTop: 20,
         textAlign: 'center',
-        fontFamily: 'Lato-Regular',
         color: '#48B7E4',
     },
     userInputContainer: {
@@ -126,6 +124,7 @@ var Style = StyleSheet.create({
         width: deviceWidth*0.9,
         backgroundColor:'#ffffff',
         height: 45,
+        alignItems: 'flex-start',
     },
     inputSignUpLayout: {
         marginTop: 0,
@@ -201,13 +200,11 @@ var Style = StyleSheet.create({
         marginTop: 0,
         fontSize: 20,
         alignItems: 'flex-start',
-        fontFamily: 'Lato-Regular',
         color: '#ffffff'
     },
     genderInput: {
         marginRight: 20,
         fontSize: 18,
-        fontFamily: 'Lato-Regular',
     },
     genderRadioContainer: {
         paddingTop: 1

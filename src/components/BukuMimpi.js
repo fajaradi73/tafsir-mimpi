@@ -9,6 +9,7 @@ import {
     TouchableOpacity,
     ImageBackground,
     FlatList,
+    ActivityIndicator,
     AppRegistry
     
 } from 'react-native';
@@ -41,6 +42,7 @@ class BukuMimpi extends Component {
       code:"",
       sourceStatus:false,
       secureTextEntry: true,
+      isLoading:true,
       toastMessage: "Congratulation! kindly check your email to activate it",
       toastText: "white",
       toastType: "success"
@@ -72,30 +74,40 @@ class BukuMimpi extends Component {
             </View>
         )
     }
+    onChangeRadio  = (userType) => {
+        if(this.state.dataTogel.length == 0){
+            this.setState({userType:userType})
+        }else{
+          this.setState({userType:userType})
+          this.onSubmit();
+        }
+      }
 
     onSubmit = () => {
       if (this.state.userSearch == "") {
         // console.warn('error');  
       }else{
-        fetch('http://192.168.100.16/bukumimpi/api/dreams/dream_search?dream_name='+this.state.userSearch+'&dream_type='+this.state.userType,{method:"GET"})
+        fetch('http://103.74.212.68/bukumimpi/api/dreams/dream_search?dream_name='+this.state.userSearch+'&dream_type='+this.state.userType,{method:"GET"})
           .then((response) => response.json())
           .then((responseJson)=>{
             if(responseJson.status == 1 && responseJson.code == "DR_SCS_0001"){
               this.setState({
-                sourceStatus : true, 
-                status  : responseJson.status,
-                code    : responseJson.code,
-                dataTogel : responseJson.data,
-                userPic : responseJson.data[0].dream_image
+                sourceStatus  : true, 
+                isLoading     : false,
+                status        : responseJson.status,
+                code          : responseJson.code,
+                dataTogel     : responseJson.data,
+                userPic       : responseJson.data[0].dream_image
               })
             }
             else{
               this.setState({
-                sourceStatus : true, 
-                status  : responseJson.status,
-                code    : responseJson.code,
-                dataTogel : [],
-                userPic : null
+                sourceStatus  : true, 
+                isLoading     : false,
+                status        : responseJson.status,
+                code          : responseJson.code,
+                dataTogel     : [],
+                userPic       : null
               })
             }
         });
@@ -116,6 +128,7 @@ class BukuMimpi extends Component {
         fontWeight: 'bold',
       },
     };
+
     renderSeparator = () =>{
         return(
           <View style={{height: 10, width: '100%'}}></View>
@@ -125,6 +138,13 @@ class BukuMimpi extends Component {
     renderResponse(){
       if(this.state.sourceStatus == true){
           if(this.state.status == 1 && this.state.code == "DR_SCS_0001"){
+            if(this.state.isLoading){
+                return(
+                  <View>
+                      <ActivityIndicator/>
+                  </View>
+                )
+              }
             return(
               <FlatList
                     style={{marginTop: 20}}
@@ -135,6 +155,13 @@ class BukuMimpi extends Component {
                 />
             )
           }else{
+            if(this.state.isLoading){
+                return(
+                  <View>
+                      <ActivityIndicator/>
+                  </View>
+                )
+              }
             return(
               <View style={{flex: 1}}>
                 <Text style={{textAlign: 'center',color: '#FFFFFF',marginTop: 50,fontSize:20}}>
@@ -150,6 +177,7 @@ class BukuMimpi extends Component {
 
   render() {
     let { errors = {}, secureTextEntry, ...data } = this.state;
+    
     return (
         <View style={Style.rootContainer}>
           <ScrollView showsVerticalScrollIndicator={false}>
@@ -191,7 +219,7 @@ class BukuMimpi extends Component {
                   placeholder='Search'
                   labelFontSize={14}
                   labelPadding={8}
-                  style={{fontSize: 16}}
+                  style={{paddingLeft: 10,fontSize: 16,height:"100%",width:"100%",alignItems: 'flex-start',justifyContent:'center'}}
                   value={data.userSearch}
                   onSubmitEditing={this.onSubmitSearch}
                   enablesReturnKeyAutomatically={true} //berlaku saat ada input
