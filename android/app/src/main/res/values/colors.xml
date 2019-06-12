@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="primary">#40bfe8</color>
-    <color name="primary_dark">#C8B617</color>
+    <color name="primary_dark">#000</color>
+    <color name="colorPrimaryDark">#0097e6</color>
     <color name="colorAccent">#c1d54d</color>
     <color name="kes_typ">#8fcece</color>
     <color name="ic_logo_background">#FFFFFF</color>

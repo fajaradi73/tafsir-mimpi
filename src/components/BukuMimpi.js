@@ -119,11 +119,11 @@ class BukuMimpi extends Component {
     }
 
     static navigationOptions = {
-      title: 'Buku Mimpi',
+      title: 'Gunung Kawi 1001',
       headerStyle: {
-        backgroundColor: '#FEEC4C',
+        backgroundColor: '#00a8ff',
       },
-      headerTintColor: '#7F5626',
+      headerTintColor: '#fff',
       headerTitleStyle: {
         fontWeight: 'bold',
       },
@@ -164,7 +164,7 @@ class BukuMimpi extends Component {
               }
             return(
               <View style={{flex: 1}}>
-                <Text style={{textAlign: 'center',color: '#FFFFFF',marginTop: 50,fontSize:20}}>
+                <Text style={{textAlign: 'center',color: '#000000',marginTop: 50,fontSize:20}}>
                   Data tidak ditemukan
                 </Text>
               </View>
@@ -181,36 +181,32 @@ class BukuMimpi extends Component {
     return (
         <View style={Style.rootContainer}>
           <ScrollView showsVerticalScrollIndicator={false}>
-            <View style={Style.userInputContainer}>
-              <View style={{height: 160,width: '100%',flexDirection: 'row',justifyContent: 'center',alignItems: 'center'}}>
-                {this.state.userPic === null ? (
-                <Image resizeMode='contain' style={{width: '100%'}} source={require('../image/bg_samping.png')} />
-                ) : (
-                  <Image resizeMode='cover' style={{height:160,width: 500}}  source={{uri : this.state.userPic}}/>
-                )}
-              </View>
+            <View style={Style.imageBuku}>
+                <Image resizeMode='cover' style={{height: '100%',width: '100%'}} source={require('../image/kawi.jpg')} />
+            </View>
+            <View style = {Style.userViewsearch}>
               <View style={Style.genderImageContainer}>
-                <ImageBackground resizeMode='contain' source={require('../image/tepi.png')} style={{width: '100%'}}>
-                <View style={Style.genderTextContainer}>
-                  <Text style={Style.genderText}>
-                    Pilih
-                  </Text>
-                  <View style={Style.genderRadioContainer}>
-                    <RadioForm 
-                      radio_props={radio_props}
-                      initial={0}
-                      formHorizontal={true}
-                      labelHorizontal={true}
-                      labelStyle={{ marginRight: 10 }}
-                      buttonColor={'#FEEC4C'}
-                      buttonSize={15}
-                      labelColor={'#ffffff'}
-                      animation={true}
-                      onPress={(userType) => this.setState({userType:userType})}
-                    />
+                  <ImageBackground resizeMode='contain' source={require('../image/tepi.png')} style={{width: '100%'}}>
+                  <View style={Style.genderTextContainer}>
+                    <Text style={Style.genderText}>
+                      Pilih
+                    </Text>
+                    <View style={Style.genderRadioContainer}>
+                      <RadioForm 
+                        radio_props={radio_props}
+                        initial={0}
+                        formHorizontal={true}
+                        labelHorizontal={true}
+                        labelStyle={{ marginRight: 10 }}
+                        buttonColor={'#ffffff'}
+                        buttonSize={15}
+                        labelColor={'#ffffff'}
+                        animation={true}
+                        onPress={(userType) => this.setState({userType:userType})}
+                      />
+                    </View>
                   </View>
-                </View>
-                </ImageBackground>
+                  </ImageBackground>
               </View>
               <View style={Style.inputLayout}>
                 <TextInput

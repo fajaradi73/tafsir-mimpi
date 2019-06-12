@@ -1,12 +1,13 @@
 import {StyleSheet, Dimensions} from 'react-native';
 
-let deviceWidth = Dimensions.get('window').width;
+let deviceWidth     = Dimensions.get('window').width;
+let deviceHeight    = Dimensions.get('window').height;
 
 var Style = StyleSheet.create({
     rootContainer: {
         flex: 1,
         alignItems: 'center',
-        backgroundColor: '#7F5626'
+        backgroundColor: '#fff'
     },
 
     inputContainer: {
@@ -109,7 +110,59 @@ var Style = StyleSheet.create({
         paddingTop: 15,
         paddingBottom: 0,
         alignItems: 'center',
-        
+    },
+    imageView :{
+        flex:1,
+        width: deviceWidth,
+        height : 250,
+        alignItems: 'center',
+    },
+    imageBuku :{
+        flex:1,
+        width: deviceWidth,
+        height : 200,
+        alignItems: 'center',
+    },
+    buttonMenu : {
+        flex    : 1,
+        flexDirection : 'row',
+        height  : 70,
+        width   : deviceWidth*0.95,
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        alignSelf: 'center',
+        borderWidth : 1, 
+        borderRadius : 10,
+        borderColor : 'black',
+        backgroundColor: '#5EE1E1',
+    },
+    textMenu :{
+        fontSize: 18,
+        fontWeight:'bold',
+        color: 'white'
+    },
+    textSub : {
+        fontSize: 13,
+        fontWeight:'bold',
+        color: 'white'
+    },
+    viewText :{
+        flex : 1,
+        flexDirection : 'column',
+    },
+    viewIcon :{
+        padding: 10,
+        height : 70,
+        width : 70,
+    },
+    viewArrow:{
+        padding: 15,
+        height : 50,
+        width : 50
+    },
+    imageButton: {
+        height : '100%',
+        width : '100%',
     },
     userInputSignUpContainer: {
         marginTop: 0,
@@ -120,11 +173,13 @@ var Style = StyleSheet.create({
     },
     inputLayout: {
         marginTop: 10,
-        marginHorizontal: 20,
         width: deviceWidth*0.9,
         backgroundColor:'#ffffff',
         height: 45,
-        alignItems: 'flex-start',
+        alignItems: 'center',
+        alignSelf: 'center',
+        borderWidth: 1,
+        borderColor : 'black'
     },
     inputSignUpLayout: {
         marginTop: 0,
@@ -135,11 +190,21 @@ var Style = StyleSheet.create({
         backgroundColor: '#48B7E4',
         width: deviceWidth*0.5,
         alignItems: 'center',
+        alignSelf: 'center',
         color: 'white',
         borderRadius: 4,
         paddingTop: 10,
         paddingBottom: 10,
-        marginTop: 20
+        marginTop: 20,
+        marginBottom: 20,
+    },
+    userViewsearch: {
+        flex: 1,
+        flexDirection: 'column',
+        backgroundColor: '#bdc3c7',
+        width : deviceWidth*0.95,
+        alignSelf: 'center',
+        marginTop: 10,
     },
     userButtonText: {
         color: 'white',
@@ -193,6 +258,7 @@ var Style = StyleSheet.create({
         marginTop: 20,
         flexDirection: 'row',
         alignItems: 'flex-start',
+        alignSelf: 'center',
         justifyContent: 'center',
     },
     genderText: {
