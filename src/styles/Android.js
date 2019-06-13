@@ -3,6 +3,15 @@ import {StyleSheet, Dimensions} from 'react-native';
 let deviceWidth     = Dimensions.get('window').width;
 let deviceHeight    = Dimensions.get('window').height;
 
+//setting up
+export let color = {
+    base : '#00a8ff',
+    secondary : "",
+    backgroundLayer : "#eee",
+    defaultFont : "#222",
+    linkFont : "#E61A80",
+} 
+
 var Style = StyleSheet.create({
     rootContainer: {
         flex: 1,
@@ -187,7 +196,7 @@ var Style = StyleSheet.create({
         width: deviceWidth*0.8,
     },
     userButton: {
-        backgroundColor: '#48B7E4',
+        backgroundColor: '#00a8ff',
         width: deviceWidth*0.5,
         alignItems: 'center',
         alignSelf: 'center',
@@ -205,6 +214,7 @@ var Style = StyleSheet.create({
         width : deviceWidth*0.95,
         alignSelf: 'center',
         marginTop: 10,
+        borderRadius : 10
     },
     userButtonText: {
         color: 'white',
@@ -273,7 +283,6 @@ var Style = StyleSheet.create({
         fontSize: 18,
     },
     genderRadioContainer: {
-        paddingTop: 1
     },
     roleMainContainer: {
         width: deviceWidth,
@@ -446,7 +455,8 @@ var Style = StyleSheet.create({
   containerListView: {
         flex: 1,
         flexDirection: 'row',
-        // width: deviceWidth*0.9,
+        width: deviceWidth*0.95,
+        alignSelf: 'center',
         // padding:10,
         marginTop: 8,
         marginBottom: 8,
@@ -471,7 +481,35 @@ var Style = StyleSheet.create({
         flex: 1,
         height: StyleSheet.hairlineWidth,
         backgroundColor: '#8E8E8E',
-    }
+    },
+    redeemItemCol : {
+        width : '50%',
+        paddingHorizontal : 5,
+        paddingBottom : 10,
+    },
+    redeemItem : {
+        height : 200,
+        width : '100%',
+        borderWidth : 1,
+        borderColor : "rgba(0,0,0,0.1)",
+        backgroundColor : "#fff",
+        borderWidth : 0.7,
+        borderColor : 'black'
+    },
+    redeemPic : {
+        width: "100%",
+        height: '100%',
+        paddingBottom: "100%",
+    },
+    sectionBody : {
+        paddingVertical : 15,
+        paddingHorizontal : 15,
+    },
+    redeemItemRow : {
+        flex : 1,
+        flexDirection : "row",
+        flexWrap : "wrap",
+    },
 });
 
 export default Style;

@@ -61,7 +61,7 @@ class MenuUtama extends Component {
                         </View>
                     </TouchableOpacity>
                     <View style ={{marginTop : 10}}/>
-                    <TouchableOpacity style = {Style.buttonMenu}>
+                    <TouchableOpacity style = {Style.buttonMenu} onPress = {()=> this.props.navigation.push("MenuGallery")}>
                         <View style ={Style.viewIcon}>
                             <Image resizeMode='center' style={Style.imageButton} source={require('../image/gambar.png')} />
                         </View>

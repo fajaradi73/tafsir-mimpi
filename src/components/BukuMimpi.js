@@ -20,13 +20,6 @@ import SplashScreen from 'react-native-splash-screen';
 const EMAIL_REGEX = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 import Toast from "../components/Toast";
 
-var radio_props = [
-  {label: 'ALL', value: 0 },
-  {label: '4D', value: 4 },
-  {label: '3D', value: 3 },
-  {label: '2D', value: 2 }
-];
-
 class BukuMimpi extends Component {
 
   constructor(props) {
@@ -45,7 +38,9 @@ class BukuMimpi extends Component {
       isLoading:true,
       toastMessage: "Congratulation! kindly check your email to activate it",
       toastText: "white",
-      toastType: "success"
+      toastType: "success",
+      radio_props: [{label: 'ALL', value: 0}, {label: '4D', value: 4}, {label: '3D', value: 3},{label: '2D', value: 2 }],
+      value3Index: 0,
     }
     this.userSearchRef = this.updateRef.bind(this, 'userSearch');
   }
@@ -68,12 +63,20 @@ class BukuMimpi extends Component {
                   <View style={Style.separator}>
                   </View>
                 <Text style={Style.text}>
-                      {`${item.dream_description}`}
+                      {`${item.dream_name}`}
                   </Text>
               </View>
             </View>
         )
     }
+
+    onPress = (value, index) => {
+        this.setState({
+          value3: value,
+          value3Index: index
+        })
+    }
+
     onChangeRadio  = (userType) => {
         if(this.state.dataTogel.length == 0){
             this.setState({userType:userType})
@@ -87,7 +90,7 @@ class BukuMimpi extends Component {
       if (this.state.userSearch == "") {
         // console.warn('error');  
       }else{
-        fetch('http://103.74.212.68/bukumimpi/api/dreams/dream_search?dream_name='+this.state.userSearch+'&dream_type='+this.state.userType,{method:"GET"})
+        fetch('http://34.87.108.11/bukumimpi/api/dreams/dream_search?dream_name='+this.state.userSearch+'&dream_type='+this.state.userType,{method:"GET"})
           .then((response) => response.json())
           .then((responseJson)=>{
             if(responseJson.status == 1 && responseJson.code == "DR_SCS_0001"){
@@ -177,7 +180,6 @@ class BukuMimpi extends Component {
 
   render() {
     let { errors = {}, secureTextEntry, ...data } = this.state;
-    
     return (
         <View style={Style.rootContainer}>
           <ScrollView showsVerticalScrollIndicator={false}>
@@ -192,18 +194,38 @@ class BukuMimpi extends Component {
                       Pilih
                     </Text>
                     <View style={Style.genderRadioContainer}>
-                      <RadioForm 
-                        radio_props={radio_props}
-                        initial={0}
-                        formHorizontal={true}
-                        labelHorizontal={true}
-                        labelStyle={{ marginRight: 10 }}
-                        buttonColor={'#ffffff'}
-                        buttonSize={15}
-                        labelColor={'#ffffff'}
-                        animation={true}
-                        onPress={(userType) => this.setState({userType:userType})}
-                      />
+                      <RadioForm formHorizontal={true} animation={true} >
+                        {this.state.radio_props.map((obj, i) => {
+                          var onPress = (value, index) => {
+                              this.setState({
+                                userType: value,
+                                value3Index: index
+                              })
+                            }
+                          return (
+                            <RadioButton labelHorizontal={true} key={i} >
+                              <RadioButtonInput
+                                obj={obj}
+                                index={i}
+                                isSelected={this.state.value3Index === i}
+                                onPress={onPress}
+                                buttonInnerColor={'#000'}
+                                buttonOuterColor={this.state.value3Index === i ? '#000' : '#fff'}
+                                buttonSize={16}
+                                buttonStyle={{}}
+                                buttonWrapStyle={{marginLeft: 10}}
+                              />
+                              <RadioButtonLabel
+                                obj={obj}
+                                index={i}
+                                onPress={onPress}
+                                labelStyle={{fontWeight: 'bold', color: '#fff',marginLeft: 10,}}
+                                labelWrapStyle={{}}
+                              />
+                            </RadioButton>
+                          )
+                        })}
+                      </RadioForm>
                     </View>
                   </View>
                   </ImageBackground>
