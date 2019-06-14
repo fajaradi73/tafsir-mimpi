@@ -90,7 +90,6 @@ class FullGambar extends Component {
 
     _renderPageHeader = (image, index, onClose) => {
         // Individual image object data.
-        console.log(image);
         return (
             <View>
                 {/*
@@ -102,12 +101,12 @@ class FullGambar extends Component {
                     the moment.  It will be compatible with
                     Android in future releases.
                 */}
-                <TouchableWithoutFeedback onPress={() => {onClose();}}>
+                <TouchableOpacity  style={{marginTop: 30,width:'15%',paddingTop: 15,paddingBottom: 15,paddingHorizontal: 10,}} onPress={() => {onClose();}}>
                     <Image
                         source={require('../image/left-arrow.png')}
-                        style={{marginLeft: 10, height: 30, width: 30}}
+                        style={{height: 25, width: 25}}
                     />
-                </TouchableWithoutFeedback>
+                </TouchableOpacity>
             </View>
         );
     }
@@ -120,6 +119,8 @@ class FullGambar extends Component {
                         uri: value.image
                     }
                 })}
+                initialColToRender = {4}
+                initialNumInColsToRender = {4}
             />
         )
     }

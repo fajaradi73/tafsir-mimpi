@@ -36,7 +36,7 @@ class MenuGallery extends Component {
     render(){
         return(
             <View style={Style.rootContainer}>
-                <StatusBar barStyle="light-content" backgroundColor= {color.base}/>
+                {/* <StatusBar barStyle="light-content" backgroundColor= {color.base}/> */}
                 <ScrollView showsVerticalScrollIndicator={false}>
                     <View style={Style.imageBuku}>
                         <Image resizeMode='cover' style={{height:'100%',width: '100%'}} source={require('../image/kawi.jpg')} />
