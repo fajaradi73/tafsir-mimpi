@@ -9,6 +9,7 @@
   "dependencies": {
     "react": "16.8.3",
     "react-native": "0.59.8",
+    "react-native-auto-height-image": "^1.1.0",
     "react-native-custom-radio-button": "^1.0.2",
     "react-native-full-screen": "0.0.2",
     "react-native-gallery-swiper": "^1.21.0",
