@@ -60,7 +60,7 @@ class FullGambar extends Component {
     }
 
     handleGetItem = async () => {
-        fetch('http://34.87.108.11/bukumimpi/api/dreams/dream_image?dream_type='+this.state.type,{method:"GET"})
+        fetch('http://kes.co.id/dev/dreambook/api/api/dreams/dream_image?dream_type='+this.state.type,{method:"GET"})
           .then((response) => response.json())
           .then((responseJson)=>{
             if(responseJson.status == 1 && responseJson.code == "DI_SCS_0001"){
@@ -116,7 +116,7 @@ class FullGambar extends Component {
                 renderPageHeader={this._renderPageHeader}
                 images={this.state.items.map((value,index)=>{
                     return {
-                        uri: value.image
+                        uri: "http://kes.co.id/dev/dreambook/assets/images/gallery/mm_"+ value.gallery_picture
                     }
                 })}
                 initialColToRender = {4}

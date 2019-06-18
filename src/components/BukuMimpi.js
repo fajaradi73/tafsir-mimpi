@@ -90,7 +90,7 @@ class BukuMimpi extends Component {
       if (this.state.userSearch == "") {
         // console.warn('error');  
       }else{
-        fetch('http://34.87.108.11/bukumimpi/api/dreams/dream_search?dream_name='+this.state.userSearch+'&dream_type='+this.state.userType,{method:"GET"})
+        fetch('http://kes.co.id/dev/dreambook/api/api/dreams/dream_search?dream_name='+this.state.userSearch+'&dream_type='+this.state.userType,{method:"GET"})
           .then((response) => response.json())
           .then((responseJson)=>{
             if(responseJson.status == 1 && responseJson.code == "DR_SCS_0001"){

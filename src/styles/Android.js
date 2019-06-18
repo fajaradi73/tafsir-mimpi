@@ -510,6 +510,25 @@ var Style = StyleSheet.create({
         flexDirection : "row",
         flexWrap : "wrap",
     },
+    viewIklan :{
+        position: 'absolute',
+        bottom: 0,
+        width: '100%', 
+        height: 60 ,
+        borderWidth: 1,
+        borderColor: 'black',
+        backgroundColor: 'black',
+    },
+    closeIklan :{
+        position: 'absolute',
+        height : 20,
+        backgroundColor: 'white',
+        width : 20, 
+        right: 0, 
+        borderWidth : 1, 
+        borderColor : 'black',
+        padding: 2,
+    },
 });
 
 export default Style;
