@@ -3659,9 +3659,9 @@ lodash.throttle@^4.1.1:
   integrity sha1-wj6RtxAkKscMN/HhzaknTMOb8vQ=
 
 lodash@^4.0.0, lodash@^4.17.11, lodash@^4.17.5, lodash@^4.3.0, lodash@^4.6.1:
-  version "4.17.11"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.11.tgz#b39ea6229ef607ecd89e2c8df12536891cac9b8d"
-  integrity sha512-cQKh8igo5QUhZ7lg38DYWAxMvjSAKG0A8wGSVimP07SIUEK2UO+arSRKbRZWtelMtN5V0Hkwh5ryOto/SshYIg==
+  version "4.17.15"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
+  integrity sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==
 
 loose-envify@^1.0.0, loose-envify@^1.1.0, loose-envify@^1.3.1, loose-envify@^1.4.0:
   version "1.4.0"
@@ -4819,7 +4819,7 @@ prompts@^2.0.1:
     kleur "^3.0.2"
     sisteransi "^1.0.0"
 
-prop-types@^15.5.10, prop-types@^15.5.8, prop-types@^15.6.1, prop-types@^15.6.2:
+prop-types@^15.5.10, prop-types@^15.5.8, prop-types@^15.6.1, prop-types@^15.6.2, prop-types@^15.7.2:
   version "15.7.2"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
   integrity sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==
@@ -4922,6 +4922,55 @@ react-lifecycles-compat@^3.0.4:
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
 
+react-native-android-image-polyfill@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/react-native-android-image-polyfill/-/react-native-android-image-polyfill-1.0.0.tgz#f0b61bac0c6a91b8f8f81233ab1998613adf64ac"
+  integrity sha1-8LYbrAxqkbj4+BIzqxmYYTrfZKw=
+
+react-native-auto-height-image@^1.1.0:
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/react-native-auto-height-image/-/react-native-auto-height-image-1.1.3.tgz#33fe313557bc2ca667d402eb495e1fc9f615b907"
+  integrity sha512-1g7CYG1NPeBgPyo7BapcZ3Qj2hFCkAtlDOUm01vfWBf8LsqaQ6P/fA15izMDRzK5tVHLYtyXdzwDciKtXMzghQ==
+  dependencies:
+    prop-types "^15.7.2"
+    react-native-android-image-polyfill "^1.0.0"
+
+react-native-custom-radio-button@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/react-native-custom-radio-button/-/react-native-custom-radio-button-1.0.2.tgz#e646b970eb50f8cbcdd35faafdbe5dedbd1dcfc7"
+  integrity sha512-5HxsUIiZ4174VQyfBS2u2KoxXZtiJji57bbOU43hrKxvvGfPs+2Nl1O3zXxz6FwI35JqlMJSRtjli+ojoH4PIw==
+
+react-native-easy-guesture-responder@^1.1.2, react-native-easy-guesture-responder@^1.1.3:
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/react-native-easy-guesture-responder/-/react-native-easy-guesture-responder-1.1.3.tgz#0a9c0e8eb68b9b43b4f86e4689786ba7525cc1b9"
+  integrity sha512-/1yHMRcslMWQJc1iRNCSjJ32npPrY3Atme0lzKxmhYJg67E7Douowq2FalGEegdid8yeZVnPKk+BkyIGyx2dCw==
+  dependencies:
+    prop-types "^15.6.2"
+
+react-native-easy-view-transformer@^1.1.1:
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/react-native-easy-view-transformer/-/react-native-easy-view-transformer-1.1.3.tgz#870f1927e08aecb53e228a22367111b8f822f154"
+  integrity sha512-nYBVFjWknIZInPPrdEYtnOyIDxZaeXxgygEU/y0WoSappDARwraDOoT7tCWH1uVTtIRyAiwcK5I+gj2MEq2n8w==
+  dependencies:
+    prop-types "^15.6.2"
+    react-native-easy-guesture-responder "^1.1.2"
+    react-native-scrolling "^1.0.2"
+
+react-native-full-screen@0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/react-native-full-screen/-/react-native-full-screen-0.0.2.tgz#27b1d9f7de30e80ff6c62c24a1589b8bebec56fb"
+  integrity sha1-J7HZ994w6A/2xiwkoVibi+vsVvs=
+
+react-native-gallery-swiper@^1.21.0, react-native-gallery-swiper@^1.23.1:
+  version "1.23.1"
+  resolved "https://registry.yarnpkg.com/react-native-gallery-swiper/-/react-native-gallery-swiper-1.23.1.tgz#3f9fa2c4424a868eabfeac0398da75ed8a317898"
+  integrity sha512-cjaG5JZhRe65gXUE3cWBr97aMI898C7eN9bYnivu5F9F/djz4F1zXCdCUAfsz62ljcOtGx4hTfbzYGqv/rAeHQ==
+  dependencies:
+    prop-types "^15.6.2"
+    react-native-easy-guesture-responder "^1.1.3"
+    react-native-image-transformer "^1.2.1"
+    react-native-page-list "^1.0.4"
+
 react-native-gesture-handler@^1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/react-native-gesture-handler/-/react-native-gesture-handler-1.2.1.tgz#9c48fb1ab13d29cece24bbb77b1e847eebf27a2b"
@@ -4930,6 +4979,40 @@ react-native-gesture-handler@^1.2.1:
     hoist-non-react-statics "^2.3.1"
     invariant "^2.2.2"
     prop-types "^15.5.10"
+
+react-native-image-layout@^5.1.2:
+  version "5.4.0"
+  resolved "https://registry.yarnpkg.com/react-native-image-layout/-/react-native-image-layout-5.4.0.tgz#14d1e0de551a400a4c18b47413ac610a49cd6f1b"
+  integrity sha512-86aGgyCjt7/kBAquk4EdRb79jH9S0utEXyGznJXRQeKeNglUmu1t6gpT9LY3CZViL5D8V07e6RDSHffpUCBUiw==
+  dependencies:
+    prop-types "^15.6.2"
+    react-native-gallery-swiper "^1.23.1"
+    react-native-masonry-list "^2.13.0"
+    react-native-smart-gallery "^1.0.3"
+
+react-native-image-transformer@^1.0.6, react-native-image-transformer@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/react-native-image-transformer/-/react-native-image-transformer-1.2.1.tgz#4ae4608b644c10dc3abf6461b32d15d3b72c2690"
+  integrity sha512-GR/pRuSK90XnVBn0SMsKH7wwS9UGREQcQQzLBevLmSx2loFcHgfLpGFtTCqSp5W7jMx60Oh1p0clnHEovZU7Yw==
+  dependencies:
+    prop-types "^15.6.2"
+    react-native-easy-view-transformer "^1.1.1"
+
+react-native-masonry-list@^2.13.0:
+  version "2.13.0"
+  resolved "https://registry.yarnpkg.com/react-native-masonry-list/-/react-native-masonry-list-2.13.0.tgz#dce8c1096d59f538716556b08a4f77ee105cb2b4"
+  integrity sha512-hXzUDZ0gmnAJoReXqSBjU0YZm+ETuI8+44ckhiBdnZpPxvyT//9LwLQIOzK43tavbG655C9F8BritmqwdCcgLA==
+  dependencies:
+    prop-types "^15.6.2"
+
+react-native-page-list@^1.0.4:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/react-native-page-list/-/react-native-page-list-1.1.0.tgz#12aa17efa9a53eea024fb367814165e21d7f542f"
+  integrity sha512-WeO09bIUHqvm3J56LO+pELw7ZbNUSeQHAOrhIXoXZlDlyg/1MrjKg5WvtUVYBjQzCf7vZliL9Z04Ek/J9HqIUw==
+  dependencies:
+    prop-types "^15.6.2"
+    react-native-easy-guesture-responder "^1.1.2"
+    react-native-scrolling "^1.0.2"
 
 react-native-safe-area-view@^0.13.0:
   version "0.13.2"
@@ -4943,15 +5026,49 @@ react-native-safe-area-view@^0.13.0:
   resolved "https://registry.yarnpkg.com/react-native-screens/-/react-native-screens-1.0.0-alpha.22.tgz#7a120377b52aa9bbb94d0b8541a014026be9289b"
   integrity sha512-kSyAt0AeVU6N7ZonfV6dP6iZF8B7Bce+tk3eujXhzBGsLg0VSLnU7uE9VqJF0xdQrHR91ZjGgVMieo/8df9KTA==
 
+react-native-scrolling@^1.0.2:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/react-native-scrolling/-/react-native-scrolling-1.0.3.tgz#ad3e964070d6a8c713f1bd703171ab26d83ab5d5"
+  integrity sha512-V8ORRnRA4sdOREJlDHxnPfM/7IK6rj/HZejgTaym1ACjKr9a3Pej4ZDOQA9qnBgNac8kMVhDup40HgJxYG//EA==
+  dependencies:
+    prop-types "^15.6.2"
+
 react-native-simple-radio-button@^2.7.3:
   version "2.7.3"
   resolved "https://registry.yarnpkg.com/react-native-simple-radio-button/-/react-native-simple-radio-button-2.7.3.tgz#c7227c0f963d6bbcfa245255d18a5a8b98fde41f"
   integrity sha512-kiYRarFj7PXzV9fbQwMBiYwS4YnhrR4NZGT68atlFIoNFxZLrt5OMCDqXZqu6R6bUWKLndzPpO/nhXc6/OU1Mg==
 
+react-native-smart-gallery@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/react-native-smart-gallery/-/react-native-smart-gallery-1.0.3.tgz#c17aa5abd6b5b480fe410e916feb3a44ce4bfe35"
+  integrity sha512-beuLaHCity/Ud1myh5VEPXkUvITjTgW/WUABHnE1dR3MAxhRvh63NfY1cDRooVFl40iwUJDWKHtRXg2AQj0LtA==
+  dependencies:
+    prop-types "^15.6.2"
+    react-native-easy-guesture-responder "^1.1.2"
+    react-native-image-transformer "^1.0.6"
+    react-native-smart-page "^1.0.1"
+
+react-native-smart-page@^1.0.1:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/react-native-smart-page/-/react-native-smart-page-1.0.3.tgz#dca90f61323228915c98f5a2699d3387c06ff0f7"
+  integrity sha512-cP/eZv6GpWjQmeqp/T9RJiuQlM4DTwMfJGrbg8qKXicYeNf7I1GGx50Aheddx0QxSLxQ0s3GIPHg63NrYC6+Vg==
+  dependencies:
+    prop-types "^15.6.2"
+    react-native-easy-guesture-responder "^1.1.2"
+    react-native-scrolling "^1.0.2"
+    react-native-swipe-render "^1.0.2"
+
 react-native-splash-screen@3.0.6:
   version "3.0.6"
   resolved "https://registry.yarnpkg.com/react-native-splash-screen/-/react-native-splash-screen-3.0.6.tgz#c0bbf2c8ae40a313c4c7044f55e569414ff68332"
   integrity sha512-yaTnGAHRyhduLSfD85gP3Vsf0BRePHW3aNNtDXbkbUhwIIeafu2cJH86U/qKFuKLMYLnFOXteOkP80gaYVGAYg==
+
+react-native-swipe-render@^1.0.2:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/react-native-swipe-render/-/react-native-swipe-render-1.0.4.tgz#d319cf116cd51328b22e78ddb8b59fe6d28082eb"
+  integrity sha512-M8ouxGbZmXUU1reFhsLNHQ17xME32bum+lZr2ynmJp5UhntjSuHE2wddSYDUAq3H3vsNPsgK8soECNRC6mBatg==
+  dependencies:
+    prop-types "^15.6.2"
 
 react-native-tab-view@^1.2.0, react-native-tab-view@^1.3.4:
   version "1.4.0"
